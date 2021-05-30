@@ -1,0 +1,10 @@
+{
+    "name": "recent",
+    "description": "See a recent osu! play",
+    "options": [{
+        "type": "STRING",
+        "name": "username",
+        "required": true,
+        "description": "The accounts username to use"
+    }]
+}

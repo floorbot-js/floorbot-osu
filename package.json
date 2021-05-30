@@ -1,0 +1,32 @@
+{
+    "name": "floorbot-osu",
+    "version": "1.0.0",
+    "description": "A discord.js bot with various osu! commands",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "nodemon --ignore \"*.json\" src/app.js",
+        "start": "node src/app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/floorbot-js/floorbot-osu.git"
+    },
+    "author": "Arcadeena",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/floorbot-js/floorbot-osu/issues"
+    },
+    "homepage": "https://github.com/floorbot-js/floorbot-osu#readme",
+    "devDependencies": {
+        "nodemon": "^2.0.7",
+        "dotenv": "^8.2.0"
+    },
+    "dependencies": {
+        "bottleneck": "^2.19.5",
+        "discord.js": "github:discordjs/discord.js",
+        "discord.js-commands": "github:floorbot-js/discord.js-commands",
+        "dhms.js": "git://github.com/floorbot-js/dhms.js",
+        "mariadb": "^2.5.3",
+        "md5-file": "^5.0.0"
+    }
+}
