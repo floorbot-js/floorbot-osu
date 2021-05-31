@@ -26,7 +26,7 @@ module.exports = class extends Osu {
             OsuApi.getUserBest({ u: username, limit: 100 })
         ]).then(userRes => {
             if (!userRes[0].length) return webhook.send(this.getUser404Embed(interaction, username));
-            if (!userRes[1].length) return webhook.send(this.getEmbedTemplate(interaction, { description: `User \`${userRes[0].username}\` does not have a recent play!` }))
+            if (!userRes[1].length) return webhook.send(this.getEmbedTemplate(interaction, { description: `User \`${userRes[0][0].username}\` does not have a recent play!` }))
 
             const user = userRes[0][0];
             const recents = userRes[1];
