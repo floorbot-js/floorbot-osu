@@ -69,13 +69,13 @@ module.exports = class extends Osu {
                                 `${OsuUtils.getRankEmoji(recent.rank)} **${simulated.pp.toFixed(2)}pp +${simulated.mods.join('')}** (${parseInt(recent.countmiss) ? 'FC ' : 'SS '} ${diffGoal.pp.toFixed(2)}pp)\n` +
                                 `**${acc}%** | **${simulated.combo}x** (${simulated.max_combo}x)\n` +
                                 `{ ${recent.count300} / ${recent.count100} / ${recent.count50} / ${recent.countmiss} }`,
-                                false,
+                                true,
                             )
                             .addField(`${OsuUtils.getDiffEmoji(beatmap.difficultyrating)} [${beatmap.version}]`,
                                 `SR:**${beatmap.difficultyrating}**★ BPM:**${beatmap.bpm}**\n` +
                                 `CS:**${beatmap.diff_size}** AR:**${beatmap.diff_approach}** OD:**${beatmap.diff_overall}** HP:**${beatmap.diff_drain}**\n` +
                                 `Length:**${DHMS.print(beatmap.total_length*1000)}** (${DHMS.print(beatmap.hit_length*1000)})`,
-                                false,
+                                true,
                             )
                             .addField(`Set ${DHMS.print(OsuUtils.getTimeSince(recent.date), false, true)} ago`,
                                 `${leaderboardIndex > -1 && parseInt(leaderboard[leaderboardIndex].replay_available) ? `[Replay](https://osu.ppy.sh/scores/osu/${leaderboard[leaderboardIndex].score_id}/download) | ` :
